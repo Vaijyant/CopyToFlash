@@ -7,7 +7,6 @@ import javax.swing.JFileChooser;
 import java.io.*;
 
 /**
- *
  * @author Vaijyant
  */
 public class CopyToFlash extends JFrame implements ActionListener {
@@ -142,11 +141,9 @@ public class CopyToFlash extends JFrame implements ActionListener {
         flag = false;
 
 
-
     }
 
     private void getDisks() {
-
 
         File[] paths;
         File dir;
@@ -158,9 +155,8 @@ public class CopyToFlash extends JFrame implements ActionListener {
 
         // for each pathname in pathname array
         for (File path : paths) {
-
             // prints file and directory paths
-            if (fsv.getSystemTypeDescription(path).equals("Removable Disk")) {
+            if (fsv.getSystemTypeDescription(path).equals("USB Drive")) {
                 p = path.toString();
                 dir = new File(p);
                 name = fsv.getSystemDisplayName(dir);
@@ -209,12 +205,12 @@ public class CopyToFlash extends JFrame implements ActionListener {
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 400, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+                layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(0, 300, Short.MAX_VALUE)
         );
 
         pack();
